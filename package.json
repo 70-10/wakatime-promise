@@ -1,0 +1,16 @@
+{
+  "name": "wakatime-promise",
+  "version": "0.1.0",
+  "bugs": {
+    "url": "https://github.com/70-10/wakatime-promise/issues"
+  },
+  "homepage": "https://github.com/70-10/wakatime-promise#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/70-10/wakatime-promise.git"
+  },
+  "scripts": {}
+}
