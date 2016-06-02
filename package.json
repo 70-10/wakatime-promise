@@ -1,5 +1,6 @@
 {
   "name": "wakatime-promise",
+  "description": "WakaTime API for Promise",
   "version": "0.2.0",
   "bugs": {
     "url": "https://github.com/70-10/wakatime-promise/issues"
