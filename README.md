@@ -4,6 +4,16 @@
 $ npm install wakatime-promise
 ```
 
+## example
+
+```javascript
+const wakatime = require("wakatime-promise")("YOUR_API_KEY");
+
+wakatime.last7Days()
+        .then(result => console.log(result))
+        .catch(err => console.error(err));
+```
+
 ## API
 
 ### `wakatime(apiKey)`
