@@ -33,7 +33,12 @@ function request(apiKey, path, resolve, reject) {
     });
 
     res.on("end", () => {
-      resolve(responseBody);
+      try {
+        const bodyJSON = JSON.parse(responseBody);
+        resolve(bodyJSON);
+      } catch (e) {
+        reject(e);
+      }
     });
   });
 
