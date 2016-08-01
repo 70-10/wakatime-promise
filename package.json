@@ -13,5 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/70-10/wakatime-promise.git"
   },
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "co": "4.6.0"
+  }
 }
