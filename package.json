@@ -13,8 +13,25 @@
     "type": "git",
     "url": "git+https://github.com/70-10/wakatime-promise.git"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint --fix index.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
-    "co": "4.6.0"
+    "co": "4.6.0",
+    "eslint": "^3.19.0",
+    "eslint-config-prettier": "^2.1.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-prettier": "^2.0.1",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.1",
+    "prettier": "^1.3.1"
   }
 }
