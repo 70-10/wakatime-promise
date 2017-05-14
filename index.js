@@ -1,4 +1,5 @@
 const https = require("https");
+const Buffer = require("safe-buffer").Buffer;
 
 module.exports = apiKey => {
   return {
@@ -6,13 +7,14 @@ module.exports = apiKey => {
     last30Days: () => request(apiKey, "/users/current/stats/last_30_days"),
     last6Months: () => request(apiKey, "/users/current/stats/last_6_months"),
     lastYear: () => request(apiKey, "/users/current/stats/last_year"),
-    summaries: (start, end) => request(apiKey, `/users/current/summaries?start=${start}&end=${end}`),
+    summaries: (start, end) =>
+      request(apiKey, `/users/current/summaries?start=${start}&end=${end}`),
     currentUser: () => request(apiKey, "/users/current"),
   };
 };
 
 function apiKeyBase64(apiKey) {
-  const apiKeyBuffer = new Buffer(apiKey);
+  const apiKeyBuffer = Buffer.from(apiKey);
   return apiKeyBuffer.toString("base64");
 }
 
@@ -23,10 +25,10 @@ function request(apiKey, path) {
     path: `/api/v1${path}`,
     method: "GET",
     headers: {
-      "Authorization": `Basic ${apiKeyBase64(apiKey)}`
-    }
+      Authorization: `Basic ${apiKeyBase64(apiKey)}`,
+    },
   };
-  return new Promise((resolve, rejcet) => {
+  return new Promise((resolve, reject) => {
     let responseBody = "";
     const req = https.request(options, res => {
       res.on("data", data => {
