@@ -25,7 +25,6 @@
     ]
   },
   "devDependencies": {
-    "co": "4.6.0",
     "eslint": "^4.9.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-node": "^5.2.0",

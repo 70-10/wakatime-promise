@@ -1,7 +1,8 @@
-const co = require("co");
 const wakatime = require("./index")("YOUR_API_KEY");
 
-co(function*() {
-  const result = yield wakatime.last7Days();
-  console.log(result);
-}).catch(console.error);
+async function main() {
+  const result = await wakatime.last7Days();
+  console.log(JSON.stringify(result, null, 2));
+}
+
+main().catch(console.error);
