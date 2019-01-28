@@ -1,16 +1,14 @@
 const https = require("https");
 const Buffer = require("safe-buffer").Buffer;
 
-module.exports = apiKey => {
-  return {
-    last7Days: () => request(apiKey, "/users/current/stats/last_7_days"),
-    last30Days: () => request(apiKey, "/users/current/stats/last_30_days"),
-    last6Months: () => request(apiKey, "/users/current/stats/last_6_months"),
-    lastYear: () => request(apiKey, "/users/current/stats/last_year"),
-    summaries: (start, end) => request(apiKey, `/users/current/summaries?start=${start}&end=${end}`),
-    currentUser: () => request(apiKey, "/users/current"),
-  };
-};
+module.exports = apiKey => ({
+  last7Days: () => request(apiKey, "/users/current/stats/last_7_days"),
+  last30Days: () => request(apiKey, "/users/current/stats/last_30_days"),
+  last6Months: () => request(apiKey, "/users/current/stats/last_6_months"),
+  lastYear: () => request(apiKey, "/users/current/stats/last_year"),
+  summaries: (start, end) => request(apiKey, `/users/current/summaries?start=${start}&end=${end}`),
+  currentUser: () => request(apiKey, "/users/current"),
+});
 
 function apiKeyBase64(apiKey) {
   const apiKeyBuffer = Buffer.from(apiKey);
