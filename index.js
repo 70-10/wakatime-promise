@@ -7,8 +7,7 @@ module.exports = apiKey => {
     last30Days: () => request(apiKey, "/users/current/stats/last_30_days"),
     last6Months: () => request(apiKey, "/users/current/stats/last_6_months"),
     lastYear: () => request(apiKey, "/users/current/stats/last_year"),
-    summaries: (start, end) =>
-      request(apiKey, `/users/current/summaries?start=${start}&end=${end}`),
+    summaries: (start, end) => request(apiKey, `/users/current/summaries?start=${start}&end=${end}`),
     currentUser: () => request(apiKey, "/users/current"),
   };
 };
