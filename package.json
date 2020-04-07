@@ -1,6 +1,6 @@
 {
   "name": "wakatime-promise",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "WakaTime API for Promise",
   "keywords": [],
   "homepage": "https://github.com/70-10/wakatime-promise",
