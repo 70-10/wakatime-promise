@@ -1,6 +1,8 @@
 const wakatime = require("./index")("YOUR_API_KEY");
 
-wakatime
-  .last7Days()
-  .then((data) => console.log(JSON.stringify(data, null, 2)))
-  .catch(console.error);
+async function main() {
+  const data = await wakatime.last7Days();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main().catch(console.error);

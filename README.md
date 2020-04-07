@@ -9,9 +9,12 @@ $ npm install wakatime-promise
 ```javascript
 const wakatime = require("wakatime-promise")("YOUR_API_KEY");
 
-wakatime.last7Days()
-        .then(result => console.log(result))
-        .catch(err => console.error(err));
+async function main() {
+  const data = await wakatime.last7Days();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main().catch(console.error);
 ```
 
 ## API
