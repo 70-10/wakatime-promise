@@ -1,5 +1,4 @@
 const https = require("https");
-const Buffer = require("safe-buffer").Buffer;
 
 module.exports = apiKey => ({
   last7Days: () => request(apiKey, "/users/current/stats/last_7_days"),

@@ -3,14 +3,8 @@
   "version": "0.6.0",
   "description": "WakaTime API for Promise",
   "keywords": [],
-  "homepage": "https://github.com/70-10/wakatime-promise#readme",
-  "bugs": {
-    "url": "https://github.com/70-10/wakatime-promise/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/70-10/wakatime-promise.git"
-  },
+  "homepage": "https://github.com/70-10/wakatime-promise",
+  "repository": "70-10/wakatime-promise",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -23,9 +17,6 @@
       "git add"
     ]
   },
-  "dependencies": {
-    "safe-buffer": "^5.1.2"
-  },
   "devDependencies": {
     "eslint": "^5.12.1",
     "eslint-plugin-node": "^8.0.1",
@@ -36,6 +27,6 @@
     "prettier-eslint-cli": "^4.7.1"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   }
 }
