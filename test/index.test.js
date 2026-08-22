@@ -1,6 +1,5 @@
 const assert = require("assert").strict;
 const { EventEmitter } = require("events");
-// eslint-disable-next-line node/no-missing-require
 const test = require("node:test");
 const https = require("https");
 
