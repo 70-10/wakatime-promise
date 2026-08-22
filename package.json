@@ -1,19 +1,26 @@
 {
   "name": "wakatime-promise",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "WakaTime API for Promise",
   "keywords": [],
   "homepage": "https://github.com/70-10/wakatime-promise",
   "repository": "70-10/wakatime-promise",
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
   "scripts": {
     "audit": "npm audit --audit-level=high",
-    "check": "npm run lint && npm run format:check && npm test && npm run audit",
+    "check": "npm run lint && npm run format:check && npm test && npm run package:check && npm run audit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "package:check": "node scripts/verify-package.js",
     "test": "node --test"
   },
   "devDependencies": {
